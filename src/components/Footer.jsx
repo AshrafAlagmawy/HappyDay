@@ -19,7 +19,7 @@ const Footer = () => {
     <footer className="bg-gray-800 text-white py-8 px-4 md:px-16">
       <div className="flex flex-col md:flex-row justify-between">
         <div>
-          <h2 className="text-lg font-semibold mb-2">Evento</h2>
+          <h2 className="text-lg font-semibold mb-2">Happy Day</h2>
           <div className="flex items-center mb-2">
             <FontAwesomeIcon icon={faPhone} className="mr-2" />
             <span onClick={handlePhoneClick} style={{ cursor: 'pointer' }}>
