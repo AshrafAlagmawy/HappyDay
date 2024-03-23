@@ -6,13 +6,15 @@ import {
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+
 const Footer = () => {
   const handlePhoneClick = () => {
-    window.open('https://wa.me/01004167358', '_blank');
+    window.open('https://wa.me/+201023237315', '_blank');
   };
 
   const handleEmailClick = () => {
-    window.location.href = 'mailto:info@evento.com';
+    window.location.href = 'mailto:info@happydayegypt.com';
   };
 
   return (
@@ -22,14 +24,26 @@ const Footer = () => {
           <h2 className="text-lg font-semibold mb-2">Happy Day</h2>
           <div className="flex items-center mb-2">
             <FontAwesomeIcon icon={faPhone} className="mr-2" />
-            <span onClick={handlePhoneClick} style={{ cursor: 'pointer' }}>
-              01004167358
+            <span
+              onClick={handlePhoneClick}
+              className="cursor-pointer hover:text-green-500 transition-all"
+            >
+              01023237315
             </span>
           </div>
           <div className="flex items-center mb-2">
             <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
-            <span onClick={handleEmailClick} style={{ cursor: 'pointer' }}>
-              info@evento.com
+            <span
+              onClick={handleEmailClick}
+              className="cursor-pointer hover:text-green-500 transition-all"
+            >
+              info@happydayegypt.com
+            </span>
+          </div>
+          <div className="flex items-center mb-2">
+            <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-2" />
+            <span className="hover:text-green-500 transition-all">
+              6th Of October, Gizah, Egypt
             </span>
           </div>
         </div>
@@ -104,7 +118,9 @@ const Footer = () => {
       </div>
 
       <div className="text-center mt-8">
-        <p>&copy; Developed by Ashraf Alagmawy . All rights reserved.</p>
+        <p>
+          Copyright &copy; Developed by Ashraf Alagmawy . All rights reserved.
+        </p>
       </div>
     </footer>
   );
