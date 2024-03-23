@@ -1,3 +1,6 @@
+import React from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Button from '../layout/Button';
 import Heading from '../layout/Heading';
 import { Link } from 'react-scroll';
@@ -34,20 +37,24 @@ const About = () => {
   return (
     <div className="md:min-h-screen flex flex-col md:flex-row items-center gap-5 md:mx-32 mx-5 mt-14">
       <div className="md:w-2/3">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+        <Carousel
+          showThumbs={false}
+          infiniteLoop={true}
+          autoPlay={true}
+          interval={2000}
+          transitionTime={500}
+        >
           {images.map((img, index) => (
-            <div
-              key={index}
-              className="w-full h-full rounded-md overflow-hidden transform transition-transform hover:scale-110"
-            >
+            <div key={index}>
               <img
                 src={img}
                 alt={`img${index + 1}`}
-                className="w-full h-full object-cover rounded-md"
+                style={{ width: '400px', height: '400px' }}
+                className="object-cover rounded-md"
               />
             </div>
           ))}
-        </div>
+        </Carousel>
       </div>
       <div className="md:w-1/3 text-center md:text-left md:pl-10">
         <Heading title1="About" title2="Us?" />

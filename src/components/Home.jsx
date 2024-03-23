@@ -1,5 +1,4 @@
 import img from '../assets/hero.jpg';
-// import img from '../assets/hero.svg';
 import Button from '../layout/Button';
 import { Link } from 'react-scroll';
 
